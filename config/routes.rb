@@ -1,7 +1,11 @@
 RailsJavascriptLeseson::Application.routes.draw do
+  get "home/index"
+
   resources :tasks
 
   resources :projects
+
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
