@@ -15,6 +15,7 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 gem 'formtastic', '~> 2.0.0.rc'
+gem 'thin'
 
 
 # Use unicorn as the web server
