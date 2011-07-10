@@ -7,3 +7,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+  var LiveClick = {
+    onclick: function(event){
+      window.location.hash = $(this).attr('href');
+      event.preventDefault();
+    },
+
+    pagechange: function () {                   //detect hash change
+      var hash = window.location.hash.slice(1); //hash to string ("#myanchor" becomes "myanchor")
+      $('#main').load(hash + ' #main div');
+    }
+  }
+
+  $('a').live('click', LiveClick.onclick);
+  $(window).bind('hashchange load', LiveClick.pagechange);
+});

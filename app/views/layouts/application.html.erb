@@ -9,8 +9,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller_name %>">
-
-<%= yield %>
+  <div id="main">
+    <div><%= yield %></div>
+  </div>
 
 </body>
 </html>
